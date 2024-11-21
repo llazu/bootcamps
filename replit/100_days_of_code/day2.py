@@ -1,0 +1,7 @@
+name = input("Enter your name?: ")
+favorite_food = input("Enter your favorite food?: ")
+print("My name is ")
+print(name)
+print("My favorite food is ")
+print(favorite_food)
+print("You can only control your behavior")
