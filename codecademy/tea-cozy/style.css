@@ -1,0 +1,25 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 69px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    height: 69px;
+    border-bottom: 1px solid seashell;
+}
+
+.cursive {
+    font-family: "Alex Brush", cursive;
+    font-size: 22px;
+    padding: 10px;
+    height: 50px;
+}
+
+.sections p {
+    display: inline-block;
+    margin: 0 10px;
+}
