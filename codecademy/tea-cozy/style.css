@@ -127,6 +127,7 @@ h4 { font-size: 1.17em; }
     align-items: center;
     background-color: transparent;
     margin: 0 auto;
+    opacity: 1;
 }
 
 .contact {
