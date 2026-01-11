@@ -11,3 +11,5 @@ print(orig_string[2:6])
 # Bonus: Think of more ways to pring zing with slice notation
 
 print(orig_string[-5:-1])
+
+#push with luis-dev
