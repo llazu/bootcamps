@@ -26,66 +26,82 @@ class Dealer():
     def __init__(self, name, casino):
         self.name=name
         self.casino=casino
-        self.first_card=None
-        self.second_card=None
+        self.card_1=None
+        self.card_2=None
     
-    def create_players(self, total_players):
-        players = [Player(i+1, None, None) for i in range(total_players)]
-        return players
+    def create_player(self, name):
+        #players = [Player(i+1, None, None) for i in range(total_players)]
+        player = Player(name, None, None)
+        return player
 
-    def deal_first_card(self, players):
-        self.first_card = random.choice(list(deck.keys()))
-        for player in players:
-            player.first_card = random.choice(list(deck.keys()))
-        return players
+    def deal_first_card(self, player):
+        self.card_1 = random.choice(list(deck.keys()))
+        #for player in players:
+        player.card_1 = random.choice(list(deck.keys()))
+        return player
     
-    def deal_second_card(self, players):
-        self.second_card = random.choice(list(deck.keys()))
-        for player in players:
-            player.second_card=random.choice(list(deck.keys()))
-        return players
+    def deal_second_card(self, player):
+        self.card_2 = random.choice(list(deck.keys()))
+        #for player in players:
+        player.card_2=random.choice(list(deck.keys()))
+        return player
+    
+    def show_cards(self):
+        return self.card_1
 
     def get_score(self):
-        return deck[self.first_card] + deck[self.second_card]
+        return deck[self.card_1] + deck[self.card_1]
 
 class Player():
-    def __init__(self, player_number, first_card, second_card):
-        self.player_number = player_number
-        self.first_card = first_card
-        self.second_card = second_card
+    max_card_index = 2
+    def __init__(self, player_name, card_1, card_2):
+        self.player_name = player_name
+        self.card_1 = card_1
+        self.card_2 = card_2
 
     def get_score(self):
-        score = deck[self.first_card] + deck[self.second_card]
+        score = deck[self.card_1] + deck[self.card_2]
         return score
     
     def __str__(self):
-        return f"Player {self.player_number}: {self.first_card}, {self.second_card}"
+        return f"Player {self.player_name}: {self.card_1}, {self.card_2}"
 
-    def hit():
-        pass
-
-    def passing(self):
-        pass
-
-def main():
-    total_players = int(input("How many players?\n")) - 1
+    def hit(self):
+        new_card = random.choice(list(deck.keys()))
+        setattr(self, f"card_{self.max_card_index}", new_card)
+        self.max_card_index += 1
+        return new_card
     
+def main():
+    #total_players = int(input("How many players?\n")) - 1
+    
+    name = input("What's your name? ")
+
     dealer = Dealer("The House", "MGM")
 
     # create players
-    players = dealer.create_players(2)
+    player = dealer.create_player(name)
+    print(player)
 
     # Deal first round
-    dealer.deal_first_card(players)
+    #dealer.deal_first_card()
+    dealer.deal_first_card(player)
 
     # Deal second round
-    dealer.deal_second_card(players)
+    #dealer.deal_second_card()
+    dealer.deal_second_card(player)
 
-    for player in players:
-        print(player)
+    print("The house first card ", dealer.show_cards())
 
-    print("Player 1 score:", players[0].get_score())
-    print("Player 2 score:", players[1].get_score())  
+    print(f"{name}'s cards", player.card_1, player.card_2)
+
+    print(f"{name}'s score", player.get_score())
+
+    #print(f"{name} your score is {player.get_score()}. Would you like to h )
     
+    hit_input = input("Would you like to hit? ")
+    if hit_input == "yes":
+        print(player.hit())
+
 if __name__ == "__main__":
     main()
