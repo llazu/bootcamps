@@ -1,0 +1,40 @@
+body {
+    background-color: #0a0f1e;
+    color: #fff;
+    font-family: 'DM Sans', 'san-serif';
+}
+
+.header h1 {
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    gap: 1rem;
+    font-size: 20px;
+    text-decoration: underline;
+    justify-content: center;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* img {
+    height: 200px;
+} */
+
+.about img {
+    /* float: right;
+    margin-left: 1rem; */
+    height: 350px;
+    flex-shrink: 0;
+}
+
+.about p {
+    text-align: center;
+    flex: 1;
+}
