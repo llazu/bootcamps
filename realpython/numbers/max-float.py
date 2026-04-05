@@ -13,3 +13,11 @@ while max != float("inf"):
     print(f'the current n: {n}')
     max = float(f"2e{n}")
     print(f'the current max: {max}')
+
+'''
+Course Solution
+
+import sys
+
+print(sys.float_info.max_10_exp)
+'''

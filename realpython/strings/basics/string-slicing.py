@@ -15,4 +15,3 @@ print(orig_string[-5:-1])
 # a solution from the course
 
 print(orig_string[2: -1])
-
