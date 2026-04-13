@@ -1,48 +1,51 @@
 body{
-    color: black;
+    margin: 0;
     font-family: "Lexend Mega", "sans-serif";
+    color: black;
+    background-color: white;
+    font-size: 22px;
+    text-align: center;
 }
 
 .header {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.header div {
-    display: flex;
-    gap: 20px;
-}
-
-h1 {
-    margin: 0;
-    text-align: center;
-    font-size: 44px;
-    font-weight: 700;
 }
 
 .navbar {
-    color:black;
-    font-size:22px;
-    text-align:center;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 10%;
 }
 
-.navbar a {
+.navbar p{
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+h2, h3, h4, p {
+    margin: 0;
+    padding: 10px;
+}
+
+a {
     color: black;
+}
+
+.main {
+    padding-top: 35px;
+    opacity: 0.9;
 }
 
 .mission {
     display: flex;
-    flex-direction: column;
+    height: 300px;
     background-image: url(assets/skyscrapers.jpg);
-    margin-top: 25px;
     padding-top: 35px;
-    text-align: center;
 }
 
-.content {
-    margin: 82px 0;
-    display: block;
+.mission .content {
+    margin: auto;
     background-color: white;
+    width: 100%;
 }
