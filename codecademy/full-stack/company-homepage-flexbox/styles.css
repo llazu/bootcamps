@@ -84,6 +84,7 @@ a {
 }
 
 .employees {
+    padding-top: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -97,7 +98,14 @@ a {
 }
 
 .employee img {
-    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: auto;
+}
+
+.contact{
+    margin-top: 20px;
 }
 
 .copyright {
