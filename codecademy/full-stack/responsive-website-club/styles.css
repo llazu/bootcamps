@@ -1,0 +1,16 @@
+body {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    background-color: lightsalmon;
+}
+
+.header {
+    background-color: teal;
+}
+
+.navbar {
+    display: flex;
+    color: lightsalmon;
+    gap: 20px;
+}
