@@ -45,15 +45,16 @@ a {
     color: white;
 }
 
-.title {
-    color: yellow;
-}
-
 .photos {
     display: flex;
     height: 250px;
     width: auto;
     justify-content: center;
-    padding-top: 40px;
+    padding: 40px 0;
     gap:50px;
+}
+
+.testimony {
+    color: yellow;
+    background-color: teal;
 }
