@@ -5,12 +5,55 @@ body {
     background-color: lightsalmon;
 }
 
-.header {
+.navbar {
     background-color: teal;
+    color: lightsalmon;
+    padding-top: 1rem;
 }
 
-.navbar {
-    display: flex;
+ul {
+    background-color: teal;
+    list-style: none;
+    margin: 0;
+}
+
+li {
     color: lightsalmon;
-    gap: 20px;
+    padding: 0.5rem 1.5rem;
+    margin-right: 1.5rem;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.banner {
+    height: 30rem;
+    padding-top: 1rem;
+}
+
+.banner h1 {
+    color: coral;
+    background-color: rgba(0.5, 0.5, 0.5, 0.5);
+    padding: 2rem;
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.purpose {
+    color: white;
+}
+
+.title {
+    color: yellow;
+}
+
+.photos {
+    display: flex;
+    height: 250px;
+    width: auto;
+    justify-content: center;
+    padding-top: 40px;
+    gap:50px;
 }
