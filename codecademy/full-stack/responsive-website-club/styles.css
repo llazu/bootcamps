@@ -5,6 +5,10 @@ body {
     background-color: lightsalmon;
 }
 
+h2 {
+    color: yellow;
+}
+
 .navbar {
     background-color: teal;
     color: lightsalmon;
@@ -47,14 +51,34 @@ a {
 
 .photos {
     display: flex;
-    height: 250px;
-    width: auto;
+    height: 300px;
     justify-content: center;
-    padding: 40px 0;
-    gap:50px;
+    /*margin: 0 auto;*/
+    /*padding: 40px 0;*/
+    gap: 50px;
+}
+
+.photos img{
+    width: 30%;
+    margin: 1.5%;
 }
 
 .testimony {
     color: yellow;
     background-color: teal;
+    height: 360px;
+    padding: 0 20px;
+    padding-top: 20px;
+}
+
+.testimony h1 {
+    font-size: 2.5rem;
+}
+
+.main-photo {
+    text-align: center;
+}
+
+.main-photo img {
+    height: 800px;
 }
