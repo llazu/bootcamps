@@ -21,9 +21,3 @@ if tracker == "no":
 
 if tracker == "yes":
     input("How better is your mood after " + favorite_thing + "? ")
-
-
-
-
-
-
