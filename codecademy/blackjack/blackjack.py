@@ -25,13 +25,13 @@ class Dealer:
     def create_player(self, name):
         return Player(name)
 
-    def deal_first_card(self, player):
+    def deal_card(self, player):
+        # 'self' is the sticky note for the Dealer. 'player' is the sticky note for the Player.
+        # Both objects have their own .cards list, so we can interact with them identically!
         self.cards.append(random.choice(list(deck.keys())))
-        player.cards.append(random.choice(list(deck.keys())))
-    
-    def deal_second_card(self, player):
-        self.cards.append(random.choice(list(deck.keys())))
-        player.cards.append(random.choice(list(deck.keys())))
+        
+        # Encapsulation: We ask the player to receive the card rather than modifying their list directly.
+        player.receive_card(random.choice(list(deck.keys())))
     
     def show_first_card(self):
         if self.cards:
@@ -42,19 +42,24 @@ class Dealer:
         return sum(deck[card] for card in self.cards)
 
 class Player:
-    def __init__(self, player_name):
-        self.player_name = player_name
+    # We use 'name' instead of 'player_name' to avoid redundant "stuttering" (e.g. player.name)
+    def __init__(self, name):
+        self.name = name
         self.cards = []
+
+    # The object manages its own state
+    def receive_card(self, card):
+        self.cards.append(card)
 
     def get_score(self):
         return sum(deck[card] for card in self.cards)
     
     def __str__(self):
-        return f"Player {self.player_name}: {', '.join(self.cards)}"
+        return f"Player {self.name}: {', '.join(self.cards)}"
 
     def hit(self):
         new_card = random.choice(list(deck.keys()))
-        self.cards.append(new_card)
+        self.receive_card(new_card)
         return new_card
     
 def main():
@@ -64,13 +69,13 @@ def main():
 
     # Create player
     player = dealer.create_player(name)
-    print(f"Welcome, {player.player_name}!")
+    print(f"Welcome, {player.name}!")
 
     # Deal first round
-    dealer.deal_first_card(player)
+    dealer.deal_card(player)
 
     # Deal second round
-    dealer.deal_second_card(player)
+    dealer.deal_card(player)
 
     print("The house first card is:", dealer.show_first_card())
 
