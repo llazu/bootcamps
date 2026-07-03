@@ -66,3 +66,24 @@ print(numbers)
 # Insert an item at a given position
 numbers.insert(5, 0)
 print(numbers)
+
+# Rotating elements
+ordinals = deque(["first", "second", "third"])
+ordinals.rotate()
+print(ordinals)
+
+ordinals.rotate(2)
+print(ordinals)
+
+ordinals.rotate(-2)
+print(ordinals)
+
+ordinals.rotate(-1)
+print(ordinals)
+
+# Deques supports indexing
+ordinals = deque(["first", "second", "third"])
+print(ordinals[1])
+
+# Deques do not support string slicing
+print(ordinals[0:2])
