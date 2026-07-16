@@ -87,3 +87,4 @@ print(ordinals[1])
 
 # Deques do not support string slicing
 print(ordinals[0:2])
+

@@ -1,3 +1,4 @@
+import decimal
 import random
 
 deck = {
@@ -13,7 +14,7 @@ deck = {
             "jackHearts" : 10, 
             "queenHearts" : 10, 
             "kingHearts" : 10,
-            "aceHearts": 1
+            "aceHearts": (1,11)
     }
 
 class Dealer:
@@ -39,7 +40,20 @@ class Dealer:
         return None
 
     def get_score(self):
-        return sum(deck[card] for card in self.cards)
+        score = 0
+        aces = 0
+        for card in self.cards:
+            val = deck[card]
+            if isinstance(val, tuple):
+                score += 11
+                aces += 1
+            else:
+                score += val
+        while score > 21 and aces > 0:
+            score -= 10
+            aces -= 1
+        return score
+
 
 class Player:
     # We use 'name' instead of 'player_name' to avoid redundant "stuttering" (e.g. player.name)
@@ -52,7 +66,19 @@ class Player:
         self.cards.append(card)
 
     def get_score(self):
-        return sum(deck[card] for card in self.cards)
+        score = 0
+        aces = 0
+        for card in self.cards:
+            val = deck[card]
+            if isinstance(val, tuple):
+                score += 11
+                aces += 1
+            else:
+                score += val
+        while score > 21 and aces > 0:
+            score -= 10
+            aces -= 1
+        return score
     
     def __str__(self):
         return f"Player {self.name}: {', '.join(self.cards)}"
@@ -62,6 +88,9 @@ class Player:
         self.receive_card(new_card)
         return new_card
     
+    def stay(self):
+        pass
+
 def main():
     name = input("What's your name? ")
 
@@ -82,12 +111,56 @@ def main():
     print(f"{name}'s cards:", ", ".join(player.cards))
     print(f"{name}'s score:", player.get_score())
     
-    hit_input = input("Would you like to hit? ")
-    if hit_input.lower().strip() in ["yes", "y"]:
-        new_card = player.hit()
-        print(f"You drew a {new_card}!")
-        print(f"{name}'s new cards:", ", ".join(player.cards))
-        print(f"{name}'s new score:", player.get_score())
+    # Player's turn
+    while True:
+        if player.get_score() > 21:
+            print(f"\n{name} busted with a score of {player.get_score()}!")
+            break
+        elif player.get_score() == 21:
+            print(f"\n{name} got 21!")
+            break
+
+        hit_input = input("Would you like to hit? (y/n): ")
+        if hit_input.lower().strip() in ["yes", "y"]:
+            new_card = player.hit()
+            print(f"You drew a {new_card}!")
+            print(f"{name}'s new cards:", ", ".join(player.cards))
+            print(f"{name}'s new score:", player.get_score())
+        else:
+            break
+
+    player_score = player.get_score()
+
+    # Dealer's turn (only if player didn't bust)
+    if player_score <= 21:
+        print(f"\n{dealer.name}'s cards: {', '.join(dealer.cards)}")
+        print(f"{dealer.name}'s score: {dealer.get_score()}")
+
+        while dealer.get_score() < 17:
+            new_card = random.choice(list(deck.keys()))
+            dealer.cards.append(new_card)
+            print(f"{dealer.name} drew a {new_card}!")
+            print(f"{dealer.name}'s new score: {dealer.get_score()}")
+
+    dealer_score = dealer.get_score()
+
+    # Determine winner
+    print("\n--- Final Results ---")
+    print(f"{player.name}: {player_score}")
+    print(f"{dealer.name}: {dealer_score}")
+
+    if player_score > 21:
+        print(f"The house {dealer.name} has Won!")
+    elif dealer_score > 21:
+        print(f"The house busted! The player {player.name} has Won!")
+    elif player_score > dealer_score:
+        print(f"The player {player.name} has Won!")
+    elif dealer_score > player_score:
+        print(f"The house {dealer.name} has Won!")
+    else:
+        print("It's a tie!")
+    
+
 
 if __name__ == "__main__":
     main()
