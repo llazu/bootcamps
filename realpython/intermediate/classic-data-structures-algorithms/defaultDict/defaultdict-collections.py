@@ -31,3 +31,24 @@ print(favorites.get("fruit", "apple"))
 
 # .get doesn't add the key value pair
 print(favorites)
+
+#Use defaultdict to group 
+from collections import defaultdict
+pets = [
+    ("dog", "Affenpincher"),
+    ("dog", "Terrier"),
+    ("dog", "Boxer"),
+    ("cat", "Abyssinian"),
+    ("cat", "Birmam")
+]
+
+# create an empty when key doesn't exist
+group_pets = defaultdict(list)
+
+for pet, breed in pets:
+    group_pets[pet].append(breed)
+
+print(group_pets)
+
+for pet, breeds in group_pets.items():
+    print(pet, "->", breeds)
