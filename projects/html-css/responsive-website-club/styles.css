@@ -1,0 +1,84 @@
+body {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    background-color: lightsalmon;
+}
+
+h2 {
+    color: yellow;
+}
+
+.navbar {
+    background-color: teal;
+    color: lightsalmon;
+    padding-top: 1rem;
+}
+
+ul {
+    background-color: teal;
+    list-style: none;
+    margin: 0;
+}
+
+li {
+    color: lightsalmon;
+    padding: 0.5rem 1.5rem;
+    margin-right: 1.5rem;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.banner {
+    height: 30rem;
+    padding-top: 1rem;
+}
+
+.banner h1 {
+    color: coral;
+    background-color: rgba(0.5, 0.5, 0.5, 0.5);
+    padding: 2rem;
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.purpose {
+    color: white;
+}
+
+.photos {
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    /*margin: 0 auto;*/
+    /*padding: 40px 0;*/
+    gap: 50px;
+}
+
+.photos img{
+    width: 30%;
+    margin: 1.5%;
+}
+
+.testimony {
+    color: yellow;
+    background-color: teal;
+    height: 360px;
+    padding: 0 20px;
+    padding-top: 20px;
+}
+
+.testimony h1 {
+    font-size: 2.5rem;
+}
+
+.main-photo {
+    text-align: center;
+}
+
+.main-photo img {
+    height: 800px;
+}

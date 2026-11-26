@@ -1,0 +1,12 @@
+Ciao! Questo è un testo di esempio in italiano.
+Serve per testare la codifica dei caratteri (come UTF-8).
+In italiano ci sono diverse lettere accentate:
+- à (come in "città")
+- è (come in "caffè")
+- é (come in "perché")
+- ì (come in "così")
+- ò (come in "andrò")
+- ù (come in "più")
+
+Se leggi questo file usando la codifica sbagliata (ad esempio ASCII), i caratteri accentati non verranno visualizzati correttamente o causeranno un errore di decodifica.
+Buono studio con la gestione dei file in Python!

@@ -1,0 +1,50 @@
+import this
+
+text = """
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess. 
+In the face of ambiguity, refuse the temptation to guess. 
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+"""
+
+with open("zen.txt", mode="w", encoding="utf-8") as file:
+    # file.read() would give an error
+    file.write(text)
+
+# write doesn't automatically include a line feed at the end
+with open("incremental.txt", mode="w", encoding="utf-8") as file:
+    file.write("Hello, ")
+    file.write("World!")
+
+# how with operates behind the scenes
+file = open("incremental.txt", encoding='utf-8')
+read = file.read()
+read_next = file.read()
+print(read)
+# empty line
+print(type(read_next))
+
+# use seek to provide a character offset
+print(file.seek(5))
+print(file.read())
+
+print(file.seek(0))
+print(file.read())
+
