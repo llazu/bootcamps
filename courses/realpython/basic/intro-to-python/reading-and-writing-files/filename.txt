@@ -1,0 +1,3 @@
+This is the first line of the sample file.
+This is the second line with more English text.
+This is the third line for reading line by line.

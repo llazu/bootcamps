@@ -1,3 +1,38 @@
+# Python
 __pycache__/
-.idea
-.junie
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# JavaScript / Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+
+# OS Metadata
+.DS_Store
+Thumbs.db
+*.lnk
+
+# IDEs & Editors
+.idea/
+.junie/
+.vscode/
+*.swp
+*.swo
+
+# Archives
+*.zip
+
+# Personal study & review notes
+blackjack_review.md
+python_oop_concepts.md

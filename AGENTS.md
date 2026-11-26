@@ -54,6 +54,7 @@ While many developers can "get away" with a purely spec-driven approach—relyin
 4. **"Driving the Car" (Interactive Experimentation):**
    - Pair conceptual definitions with interactive, hands-on experimentation.
    - Allow Luis to tweak live parameters (changing opacities, coordinates, angles) so cause-and-effect becomes immediately visible.
+   - **Iterative Visual-First Styling (Guided Discovery):** Prompt Luis with one visual question at a time rather than listing all CSS properties upfront—add one property, inspect the browser, and let what looks off dictate the next property.
 
 5. **Recursive Reading & Spaced Review:**
    - Luis builds deep comprehension through repeated readings. Re-reading technical breakdowns multiple times allows concepts to synthesize, connect, and permanently stick.
@@ -74,3 +75,8 @@ While many developers can "get away" with a purely spec-driven approach—relyin
    - **Acknowledge the Real Cost:** Deep understanding—not superficial syntax memorization—demands real cognitive energy, iterative reading, and time. We openly acknowledge this investment as an unavoidable, honorable part of the craft.
    - **We Don't Have to Conquer It All in One Day:** We deliberately pace ourselves slowly across multiple sessions. There is no rush to finish everything in a single sitting.
    - **Compounding Over Rushing:** Focus on one concept or section at a time. Small, rock-solid gains compound like interest into an unshakable foundation without burnout.
+
+9. **Frontend Implementation Over Graphic Design (Design Spec Provided):**
+   - Luis is learning **frontend engineering**, not graphic design.
+   - Assume the visual design spec (colors, spacing, shadows, typography, layout) is handed off by a designer—provide concrete visual specs directly rather than asking Luis to make open-ended aesthetic or design-direction choices.
+   - Keep the focus on the **HTML/CSS/JS mechanics** required to faithfully implement the provided spec.

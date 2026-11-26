@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+nav {
+    /*Places children in a horizontal row*/
+    display: flex;
+    /*Controls spacing between items*/
+    gap: 100px;
+    /*Vertically aligns items*/
+    align-items: center;
+    justify-content: center;
+    margin: 50px 50px;
+}
+
+body {
+    /*deep slate/navy instead of harsh black*/
+    background-color: #0b0f19;
+    /*soft white for text*/
+    color: #f1f5f9;
+    /*Removes the default Times New Roman look */
+    font-family: sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #94a3b8;
+}
+
+#aboutme, #skills{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.greeting {
+    color: #38bdf8
+}
+
+.headline {
+    color: #94a3b8;
+}
+
+.name {
+    font-size: 3rem;
+}
+
+.hook,
+.bio {
+    line-height: 1.6;
+}
+
+.hook {
+    /*font-size: 1.25rem;*/
+    border-left: 3px solid #38bdf8;
+    padding-left: 16px;
+}
+
+.skills-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.skill-card {
+    background-color: #111827;
+    border: 1px solid #1e293b;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.skill-tags {
+    display: inline-block;
+    padding: 6px 12px;
+}
+
+.skill-tags li {
+    background-color: #1e293b;
+    color: #94a3b8;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}

@@ -1,0 +1,13 @@
+%history -f datetime.txt
+import datetime
+datetime.datetime.MINYEAR
+dt = datime.datetime.now()
+dt = dateime.datetime.now()
+dt = datetime.datetime.now()
+dt.MINYEAR
+dir(dt)
+import datetime
+datetime.MINYEAR
+%history -f datetime.txt
+get_ipython().run_line_magic('logstart', 'datetime.txt append')
+get_ipython().run_line_magic('logstop', '')
