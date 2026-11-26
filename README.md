@@ -12,7 +12,7 @@ A curated repository of hands-on projects and structured coursework across **Pyt
 
 | Project | Stack | Course / Origin | Status / Location |
 | :--- | :--- | :--- | :--- |
-| **Personal Portfolio** | HTML, CSS | Codecademy — Full-Stack Engineer Path *(Extended)* | Standalone repo *(add GitHub URL here)* |
+| **Personal Portfolio** | HTML, CSS | Codecademy — Full-Stack Engineer Path *(Extended)* | Staged in [`archive/portfolio-website`](./archive/portfolio-website) *(moving to standalone repo)* |
 | **Flask REST API** | Python, Flask, Connexion, OpenAPI | [Real Python — Python REST APIs With Flask, Connexion, and SQLAlchemy (Parts 1–3)](https://realpython.com/flask-connexion-rest-api/) | Staged in [`archive/realpython-flask`](./archive/realpython-flask) *(moving to standalone repo)* |
 
 ---
@@ -37,7 +37,7 @@ A curated repository of hands-on projects and structured coursework across **Pyt
 ### HTML & CSS
 | Project | Concepts & Stack | Course / Origin |
 | :--- | :--- | :--- |
-| [**Portfolio Website (Bootcamp)**](./projects/html-css/portfolio-website) | Semantic HTML, custom CSS architecture, responsive layout | Codecademy — Full-Stack Engineer Path |
+| [**Portfolio Website (Bootcamp)**](./projects/html-css/portfolio-bootcamp) | Semantic HTML, custom CSS architecture, responsive layout | Codecademy — Full-Stack Engineer Path |
 | [**Company Homepage (Flexbox)**](./projects/html-css/company-homepage-flexbox) | CSS Flexbox layout, responsive design | Codecademy — Full-Stack Engineer Path |
 | [**Responsive Website Club**](./projects/html-css/responsive-website-club) | Responsive CSS, media queries, mobile-first grids | Codecademy — Full-Stack Engineer Path |
 | [**Tea Cozy**](./projects/html-css/tea-cozy) | CSS Flexbox, spec-to-code layout implementation | Codecademy — Full-Stack Engineer Path |
